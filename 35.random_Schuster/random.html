@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link href="css/random.css" rel="stylesheet" type="text/css">
+</head>
+	
+<body>
+	
+<div class="sideBySide">
+<img class="foodStill" id="leftImage" onClick="randomizer(event)" src="images/eggMcMuffin.jpeg" alt="Egg McMuffin">
+<img class="foodStill" id="middleImage" onClick="randomizer(event)" src="images/foodHeart.jpeg" alt="Food Heart">
+<img class="foodStill" id="rightImage" onClick="randomizer(event)" src="images/pasta.jpeg" alt="Pasta">
+</div>
+	
+</body>
+
+<script>
+
+// elements that can change
+
+var leftImage = document.getElementById("leftImage");
+var middleImage = document.getElementById("middleImage");
+var rightImage = document.getElementById("rightImage");
+	
+// list of images in the image folder
+	
+var eggMcMuffin = "images/eggMcMuffin.jpeg";
+var foodHeart = "images/foodHeart.jpeg";
+var pasta = "images/pasta.jpeg";
+var pizza = "images/pizza.jpeg";
+var salmon = "images/salmon.jpeg";
+
+	
+function randomizer(event){
+	var x = Math.floor(Math.random() * 5) + 1;
+//  console.log("var x = " + x)
+	console.log(event.currentTarget.id);
+	if (x == 1){
+		event.currentTarget.src = pizza;
+	}
+	
+	if (x == 2){
+		event.currentTarget.src = salmon;
+	}
+	
+	if (x == 3){
+		event.currentTarget.src = eggMcMuffin;
+	}
+	
+	if (x == 4){
+		event.currentTarget.src = foodHeart;
+	}
+	
+	if (x == 5){
+		event.currentTarget.src = pasta;
+	}
+}
+	
+</script>
+
+</html>
