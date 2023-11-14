@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link href="css/truism.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+<div>
+<video id="displayed_vid" muted="muted" autoplay="autoplay" loop="loop" >
+<source src="video/Face_compressed.mp4" type="video/mp4">
+</video>
+</div>
+	
+<div class= "centered_text">
+<h1 id="truism" onmouseover="onTruismText()" onmouseout="outTruismText()" onClick="changeVideo()" >It’s Important to Stay Clean On All Levels</h1>
+</div>
+
+
+<script>
+	
+var channel = 1;
+var pausedAt = 0;
+	
+// stuff for sound
+	
+var mySound = new Audio("sounds/cleanMusic.mp3");
+	
+// reference to video element
+
+var displayed_video = document.getElementById("displayed_vid");
+	
+// references to the videos
+	
+var face = "video/Face_compressed.mp4";
+var room = "video/Room_compressed.mp4";
+	
+function onTruismText(){
+	document.getElementById("displayed_vid").style.filter="blur(10px)";
+}
+	
+function outTruismText(){
+	document.getElementById("displayed_vid").style.filter="blur(0px)";
+}
+	
+function changeVideo(){
+	console.log("change");
+	pausedAt = displayed_video.currentTime;
+	if (channel == 0){
+		displayed_video.src = face;
+		displayed_video.currentTime = pausedAt;
+		channel = 1;
+	}else{
+		displayed_video.src = room;
+		displayed_video.currentTime = pausedAt;
+		channel = 0;
+		}
+	
+	mySound.play();
+}
+
+</script>
+</body>
+</html>
