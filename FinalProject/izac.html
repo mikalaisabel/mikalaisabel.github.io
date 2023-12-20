@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Build a Boy</title>
+<link href="css/CYOA_sample.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+<h1>You Unlocked Izac!</h1>
+	
+<div>
+<video id="displayedVideo" class="snap" autoplay="autoplay" controls="on">
+<source src="video/Compressed/Izac.mp4" type="video/mp4">
+</video>
+</div>
+	
+<p class="caption">
+Press play to meet your boy! 
+</p>
+	
+<div id="DIVfor buttons">
+<p>
+<button id="topButton" onClick="buttonOne()">Build Another Boy!</button>
+</p>
+</div>
+	
+
+
+<script>
+	
+var topButton = document.getElementById("topButton");
+//var bottomButton = document.getElementById("bottomButton");
+	
+topButton.style.display = "none";
+//bottomButton.style.display = "none";
+
+document.getElementById("displayedVideo").addEventListener("ended",whenVideoEnds);
+
+function whenVideoEnds(){
+	console.log("this function runs when the video ends");
+	topButton.style.display = "block";
+	//bottomButton.style.display = "block";
+}
+	
+function buttonOne() {
+	window.open ('opening.html','_self',false)
+}
+	
+
+</script>
+	
+</body>
+</html>

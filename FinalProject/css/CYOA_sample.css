@@ -1,0 +1,104 @@
+@charset "utf-8";
+h1 {
+    text-align: center;
+}
+.picCenter {
+    margin: 0 auto;
+    display: flex;
+	align-items: center;
+    width: auto;
+    height: 600px;
+}
+
+.snap {
+	width: auto;
+	height: 600px;
+}
+
+#displayedVideo {
+    width: auto;
+    max-height: 650px;
+}
+
+#blonde {
+    height: 600px; 
+	display: flex;
+	align-items: center;
+}
+
+#brunette {
+    height: 600px;
+	display: flex;
+	align-items: center;
+}
+
+#curly{
+	height: 600px;
+	width: auto;
+	display: flex;
+	align-items: center;
+}
+
+#straight{
+	height: 600px;
+	width: auto;
+	display: flex;
+	align-items: center;
+}
+
+#glasses{
+	height: 600px;
+	width: auto;
+	display: flex;
+	align-items: center;
+}
+
+#noGlasses{
+	height: 600px;
+	width: auto;
+	display: flex;
+	align-items: center;
+}
+
+#green{
+	height: 200px;
+	width: auto;
+	display: flex;
+	align-items: center	
+}
+
+#brown{
+	height: 200px;
+	width: auto;
+	display: flex;
+	align-items: center
+}
+
+#blue{
+	height: 200px;
+	width: auto;
+	display: flex;
+	align-items: center
+}
+
+#filmMajor{
+	height: 450px;
+}
+
+#animationMajor{
+	height: 450px;
+}
+
+#otherMajor{
+	height: 450px;
+}
+
+#finalBoy{
+	height: 640px;
+}
+
+#formulas {
+    height: 495px; 
+	display: flex;
+	filter: blur(100px);
+}

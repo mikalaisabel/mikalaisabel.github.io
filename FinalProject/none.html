@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Build a Boy</title>
+<link href="css/CYOA_sample.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<h1>Oh no! You didn't unlock anyone!</h1>
+
+<!-- Hair section -->
+
+<div class = "picCenter">    
+<img id="formulas" src="images/formulas.png" alt="Blonde Hair"/> 
+</div>
+
+<p class="caption" id="filter" onmouseover="blurOff()" onmouseout="blurOn()">
+Hover your mouse HERE to see combinations you could do or press the button to try again.
+</p>
+
+<div class="DIVforButtons">
+<p>
+<button id="topBTN" onClick="tryAgainChoice()">Build Another Boy!</button>  
+</p>    
+
+</div>
+
+
+	
+<script>
+
+   // document.getElementById('displayedVideo').addEventListener('ended',whenVideoEnds,false);
+        
+    var topBTN = document.getElementById("topBTN");
+    var bottomBTN = document.getElementById("bottomBTN"); 
+   
+    var caption = document.getElementById("caption");    
+
+   // caption.style.display = 'none';    
+   // topBTN.style.display = 'none';
+   // bottomBTN.style.display = 'none';        
+
+    function whenVideoEnds(e) {
+		// these three commands make the caption and the 2 buttons visible
+    //   caption.style.display = 'block';    
+    //   topBTN.style.display = 'block';
+    //  bottomBTN.style.display = 'block';
+    }
+        
+		// MAKE SURE THE WINDOW OPENS THE FILE NAME on YOUR DIRECTORY 
+		// Lines 63 and 64 are the only places you have to make a change
+    
+// Hair Color
+	
+	var formulas = document.getElementById("formulas");
+	
+	function tryAgainChoice() {
+		window.open ('opening.html','_self',false)
+}
+	
+    function blurOn(){
+	document.getElementById("formulas").style.filter="blur(100px)";
+}
+	
+	function blurOff(){
+	document.getElementById("formulas").style.filter="blur(0px)";
+}
+    
+	
+</script>
+    
+</body>
+</html>

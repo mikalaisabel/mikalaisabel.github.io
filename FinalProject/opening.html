@@ -1,0 +1,315 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Build a Boy</title>
+<link href="css/CYOA_sample.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<h1>Scroll to Build a Boy! </h1>
+
+<!-- Hair section -->
+
+<div class = "picCenter">    
+<img id="blonde" src="images/blondeHair.png" alt="Blonde Hair"/> 
+<img id="brunette" src="images/brunetteHair.png" alt="Brunette Hair"/> 
+</div>
+
+<p class="caption">
+Would you like your boy to have blonde hair or brunette hair? 
+</p>
+
+<div class="DIVforButtons">
+<p>
+<button id="blondeBTN" onClick="blondeChoice()">Blonde</button>  
+</p>    
+<p>
+<button id="brunetteBTN" onClick="brunetteChoice()">Brunette</button>    
+</p>
+</div>
+
+<!-- Hair Type -->
+
+<h1>Hair Type!</h1>
+
+<div class = "picCenter">    
+<img id="curly" src="images/curly.jpeg" width="612" height="291" alt="Hair Types"/>
+<img id="straight" src="images/straight.jpeg" width="612" height="291" alt="Hair Types"/>
+</div>
+
+<p class="caption">
+Should he have straight or curly hair? 
+</p>
+
+<div class="DIVforButtons">
+<p>
+<button id="straightBTN" onClick="straightChoice()">Straight</button>  
+</p>    
+<p>
+<button id="curlyBTN" onClick="curlyChoice()">Curly</button>    
+</p>
+</div>
+	
+<!-- Glasses -->
+
+<h1>Glasses!</h1>
+
+<div class = "picCenter">    
+<img id="glasses" src="images/glasses.png" width="1645" height="2400" alt="Glasses"/>
+<img id="noGlasses" src="images/noGlasses.png" width="1645" height="2400" alt="Glasses"/> 
+</div>
+
+<p class="caption">
+What about glasses?
+</p>
+
+<div class="DIVforButtons">
+<p>
+<button id="glassesBTN" onClick="glassesChoice()">Glasses</button>  
+</p>    
+<p>
+<button id="noGlassesBTN" onClick="noGlassesChoice()">No Glasses</button>    
+</p>
+</div>
+	
+<!-- Eyes -->
+
+<h1>Eyes!</h1>
+
+<div>    
+<img id="green" src="images/green.png" width="1645" height="2400" alt="Eyes"/>
+</div>
+<div>
+<img id="brown" src="images/brown.png" width="1645" height="2400" alt="Eyes"/>
+</div>
+<div>
+<img id="blue" src="images/blue.png" width="1645" height="2400" alt="Eyes"/> 
+</div>
+
+<p class="caption">
+Would you like him to have some pearly blues, dusty browns, or emerald greens?
+</p>
+	
+<div class="DIVforButtons">
+<p>
+<button id="greenBTN" onClick="greenChoice()">Green</button>  
+</p>  
+<button id= "brownBTN" onClick="brownChoice()">Brown</button>
+<button id="blueBTN" onClick="blueChoice()">Blue</button>    
+</div>
+	
+<!-- College -->
+
+<h1>College!</h1>
+
+<div class = "picCenter">    
+<img id="filmMajor" src="images/filmMajor.jpeg" width="1645" height="2400" alt="Film"/> 
+<img id="animationMajor" src="images/animationMajor.jpeg" alt="Animation"/>
+<img id="otherMajor" src="images/otherMajor.jpeg" alt="Other"/>
+</div>
+
+<p class="caption">
+Would you like him to be a film major, animation major, or something else?
+</p>
+
+<div class="DIVforButtons">
+<p>
+<button id="filmBTN" onClick="filmChoice()">Film</button>  
+</p>  
+<button id= "animationBTN" onClick="animationChoice()">Animation</button>
+<button id="otherBTN" onClick="otherChoice()">Other</button>    
+</div>
+	
+<!-- Create -->
+
+<h1>It's time to meet your boy!</h1>
+
+<div class = "picCenter">    
+<img id="finalBoy" src="images/finalBoy.png" alt="Baby"/>
+</div>
+
+<div class="DIVforButtons">
+<p>
+<button id="createBTN" onClick="createChoice()">Create</button>  
+</p>    
+</div>
+
+	
+<script>
+        
+    var topBTN = document.getElementById("topBTN");
+    var bottomBTN = document.getElementById("bottomBTN"); 
+   
+    var caption = document.getElementById("caption");           
+
+    function whenVideoEnds(e) {
+    }
+	
+// Hair Color
+	
+	var hairColor;
+	
+	function blondeChoice() {
+		hairColor = "blonde";
+		document.getElementById("brunette").style.filter="opacity(0)";
+    }
+        
+    function brunetteChoice() {
+		hairColor = "brunette";
+		document.getElementById("blonde").style.filter="opacity(0)";
+    }    
+	
+// Hair Style
+	
+	var hairStyle;
+	
+	function straightChoice() {
+		hairStyle = "straight";
+		document.getElementById("curly").style.filter="opacity(0)";
+	}
+	
+	function curlyChoice() {
+		hairStyle = "curly";
+		document.getElementById("straight").style.filter="opacity(0)";
+	}
+	
+//Glasses
+	
+	var glasses;
+	
+	function glassesChoice() {
+		glasses = "glasses";
+		document.getElementById("noGlasses").style.filter="opacity(0)";
+    }
+        
+    function noGlassesChoice() {
+		glasses = "noGlasses";
+		document.getElementById("glasses").style.filter="opacity(0)";
+    }    
+	
+// Eye Color
+	
+	var eyeColor;
+	
+	function greenChoice() {
+		eyeColor = "green";
+		document.getElementById("brown").style.filter="opacity(0)";
+		document.getElementById("blue").style.filter="opacity(0)";
+    }
+        
+    function brownChoice() {
+		eyeColor = "brown";
+		document.getElementById("green").style.filter="opacity(0)";
+		document.getElementById("blue").style.filter="opacity(0)";
+	}
+	
+	function blueChoice() {
+		eyeColor = "blue";
+		document.getElementById("green").style.filter="opacity(0)";
+		document.getElementById("brown").style.filter="opacity(0)";
+    }    
+	
+// College
+	
+	var college;
+	
+	function filmChoice() {
+		college = "film";
+		document.getElementById("animationMajor").style.filter="opacity(0)";
+		document.getElementById("otherMajor").style.filter="opacity(0)";
+    }
+        
+    function animationChoice() {
+		college = "animation";
+		document.getElementById("filmMajor").style.filter="opacity(0)";
+		document.getElementById("otherMajor").style.filter="opacity(0)";
+	}
+	
+	function otherChoice() {
+		college = "other";
+		document.getElementById("filmMajor").style.filter="opacity(0)";
+		document.getElementById("animationMajor").style.filter="opacity(0)";
+    }  
+		
+// Create
+	
+	var create
+	
+	function createChoice() {
+		
+		if (hairColor == "brunette" && hairStyle == "curly" && glasses == "glasses" && eyeColor == "green" && college == "other"){
+			window.open ('will.html','_self',false)
+		}
+		
+		else if (hairColor == "brunette" && hairStyle == "straight" && glasses == "glasses" && eyeColor == "brown" && college == "other"){
+			window.open ('max.html','_self',false)
+		}
+		
+		else if (hairColor == "brunette" && hairStyle == "straight" && glasses == "glasses" && eyeColor == "brown" && college == "animation"){
+			window.open ('jacob.html','_self',false)
+		}
+		
+		else if (hairColor == "brunette" && hairStyle == "curly" && glasses == "noGlasses" && eyeColor == "brown" && college == "animation"){
+			window.open ('jose.html','_self',false)
+		}
+		
+		else if (hairColor == "brunette" && hairStyle == "curly" && glasses == "glasses" && eyeColor == "brown" && college == "other"){
+			window.open ('johnathan.html','_self',false)
+		}
+		
+		else if (hairColor == "brunette" && hairStyle == "curly" && glasses == "noGlasses" && eyeColor == "blue" && college == "other"){
+			window.open ('john.html','_self',false)
+		}
+		
+		else if (hairColor == "brunette" && hairStyle == "curly" && glasses == "noGlasses" && eyeColor == "brown" && college == "film"){
+			window.open ('nick.html','_self',false)
+		}
+		
+		else if (hairColor == "blonde" && hairStyle == "straight" && glasses == "noGlasses" && eyeColor == "green" && college == "other"){
+			window.open ('owen.html','_self',false)
+		}
+		
+		else if (hairColor == "brunette" && hairStyle == "straight" && glasses == "noGlasses" && eyeColor == "brown" && college == "other"){
+			window.open ('austin.html','_self',false)
+		}
+		
+		else if (hairColor == "blonde" && hairStyle == "curly" && glasses == "noGlasses" && eyeColor == "blue" && college == "other"){
+			window.open ('kalyan.html','_self',false)
+		}
+		
+		else if (hairColor == "brunette" && hairStyle == "straight" && glasses == "glasses" && eyeColor == "green" && college == "film"){
+			window.open ('adamR.html','_self',false)
+		}
+		
+		else if (hairColor == "brunette" && hairStyle == "straight" && glasses == "noGlasses" && eyeColor == "green" && college == "other"){
+			window.open ('ethan.html','_self',false)
+		}
+		
+		else if (hairColor == "brunette" && hairStyle == "straight" && glasses == "glasses" && eyeColor == "green" && college == "other"){
+			window.open ('izac.html','_self',false)
+		}
+		
+		else if (hairColor == "blonde" && hairStyle == "straight" && glasses == "noGlasses" && eyeColor == "green" && college == "animation"){
+			window.open ('ethanG.html','_self',false)
+		}
+		
+		else if (hairColor == "brunette" && hairStyle == "curly" && glasses == "noGlasses" && eyeColor == "brown" && college == "other"){
+			window.open ('mark.html','_self',false)
+		}
+		
+		else if (hairColor == "blonde" && hairStyle == "straight" && glasses == "glasses" && eyeColor == "blue" && college == "other"){
+			window.open ('chase.html','_self',false)
+		}
+		
+		else {
+			window.open ('none.html','_self',false)
+		}
+
+	}
+	
+</script>
+    
+</body>
+</html>
